@@ -1,0 +1,125 @@
+
+
+.banner-title
+	margin: 0 auto
+	margin-top: 5rem
+
+	&__title
+		font-size: 6rem
+		line-height: 7rem
+		font-weight: normal
+		color: $main
+		max-width: 80rem
+		margin: 0 auto
+		text-align: center
+
+.banner-form
+	margin: 7rem 0 0 0
+	display: flex
+	justify-content: center
+
+	&__input
+		flex-basis: 40%
+		margin-right: 2rem
+		padding-bottom: 0.5rem
+		font-size: 1.4rem
+		border-radius: 1rem
+		border: none
+		border-radius: 0
+		background: transparent
+		border-bottom: solid 1px $main
+
+	&__button
+		padding: 1.3rem 2.5rem
+		font-size: 1.4rem
+		color: $content
+		border: solid 1px $content
+		background: transparent
+		border-radius: 1rem
+		font-weight: 700
+		transition: all 0.3s ease
+
+		&:hover
+			background: $content
+			color: $bg
+		&:focus
+			outline: none
+			transition: all 0.3s ease
+		
+
+
+@media(max-width: 992px)
+	
+	.banner
+		padding: 0
+
+	.banner-title
+		max-width: 70rem
+
+		&__title
+			font-size: 5rem
+
+
+@media(max-width: 768px)
+	
+	.banner
+		padding: 0
+
+	.banner-title
+		max-width: 50rem
+
+		&__title
+			font-size: 4.2rem
+
+	.banner-form
+
+		&__input
+			flex-basis: 50%
+
+		&__button
+			padding: 1rem 2rem
+			font-size: 1.2rem
+
+
+
+@media(max-width: 576px)
+	
+	.banner
+		padding: 0
+
+	.banner-title
+		max-width: 40rem
+
+		&__title
+			font-size: 3.5rem
+			line-height: 5rem
+
+	.banner-form
+		margin: 4rem auto
+		max-width: 40rem
+		flex-direction: column
+		justify-content: flex-end
+
+		&__input
+			flex-basis: 50%
+			font-size: 1.2rem
+			margin: 0
+			padding-bottom: 0.5rem
+	
+		&__button
+			margin-left: auto
+			margin-top: 2rem
+			padding: 0.8rem
+			font-size: 1.2rem
+
+
+@media(min-width: 320px) and (max-width: 440px)
+	
+	.banner-title
+		max-width: 35rem
+		&__title
+			font-size: 3rem
+			line-height: 4rem
+
+	.banner-form	
+		width: 27rem	

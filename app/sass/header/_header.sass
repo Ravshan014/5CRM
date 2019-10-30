@@ -1,0 +1,276 @@
+html
+	font-size: 10px
+
+body
+	background: $bg
+
+#header
+	margin: 1rem 0 7rem 0
+
+
+.header-container
+	position: relative	
+	
+.top-header
+	padding: 2rem 0
+	display: flex
+	align-items: center
+
+.top-header-left
+	display: flex
+	align-items: center
+	flex-basis: 70%
+
+.logo
+	margin: 0 1rem 0 0
+	
+
+.nav
+
+	&__list
+		margin: 0
+		padding: 0
+		margin-left: 1rem
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__item
+		padding: 0 1.5rem
+		list-style: none
+
+	&__link
+		text-decoration: none
+		font-size: 1.3rem
+		color: $main
+		transition: all 0.3s ease
+		&:hover
+			text-decoration: none
+			color: $main
+			opacity: 0.7
+			transition: all 0.3s ease
+		&:focus
+			outline: none
+			color: $content
+
+
+.top-header-right
+	display: flex
+	flex-basis: 25%
+	justify-content: flex-end
+	align-items: center
+
+.search
+	padding: 0
+
+.phone-xs
+	display: none
+
+.phone
+	margin: 0
+	
+	&__text
+		color: $content
+		font-size: 1.4rem
+		margin: 0 1rem
+		&:hover
+			text-decoration: none
+			color: $content
+			opacity: 0.7
+			transition: all 0.3s ease
+
+
+.button
+	margin: 0 1rem
+	padding: 0.5rem 2rem
+	font-size: 1.3rem
+	color: $content
+	border: solid 1px $content
+	background: transparent
+	border-radius: 1rem
+	font-weight: 700
+	transition: all 0.3s ease
+
+	&:hover
+		background: $content
+		color: $bg
+	&:focus
+		outline: none
+		transition: all 0.3s ease
+
+
+
+.nav-xs
+	opacity: 0
+	background: rgba($bg, 0.94)
+	width: calc(100vw * 0.3)
+	box-shadow: 0 0rem 1rem 0rem rgba($main, 0.4)
+	position: absolute
+	top: 6.5rem	
+	right: 2rem	
+	transition: all 0.3s ease-in
+
+
+	&__list
+		padding: 0
+		padding-top: 1rem
+		display: flex
+		flex-direction: column
+
+
+	&__item
+		font-size: 1.3rem
+		padding: 0.5rem 1rem
+		list-style: none
+		text-align: center
+		
+
+	&__link
+		padding: 0.5rem
+		color: $main
+		transition: all 0.2s ease-in
+
+		&:hover
+			text-decoration: none
+			color: $main
+			opacity: 0.6
+			transition: all 0.2s ease-in
+
+
+
+.closed
+	opacity: 1
+	background: rgba($bg, 0.94)
+	width: calc(100vw * 0.3)
+	box-shadow: 0 0rem 1rem 0rem rgba($main, 0.4)
+	position: absolute
+	top: 6.5rem	
+	right: 2rem	
+	transition: all 0.3s ease-in
+
+
+
+@media(min-width: 320px) and (max-width: 400px)
+
+	.nav-xs
+		right: 1rem
+		width: 50%
+
+
+
+
+@media(min-width: 320px) and (max-width: 1200px)
+
+	.nav
+		display: none
+
+	.phone
+		display: none
+	
+	.logo__img
+		width: 10rem
+	
+	.search
+		margin: 0 2rem
+
+	.button
+		padding: 0.5rem 1.5rem
+		margin: 0 1rem
+		font-size: 1.1rem
+		display: none
+
+	.nav
+
+		&__list
+			margin: 0
+			padding: 0
+
+		&__item
+			padding: 1rem
+
+		&__link
+			font-size: 1.1rem
+
+	.nav-xs
+		width: 35%
+
+	.menu-xs
+		position: relative
+		margin: 1rem
+		margin-left: 0
+		cursor: pointer
+
+	.menu-burger, .menu-burger:after, .menu-burger:before 
+		position: absolute
+		content: ""
+		width: 3rem
+		height: 2px
+		background-color: $content
+		transition: all 0.3s ease-in
+
+	
+	.menu-burger:after
+		transform: translateY(0.8rem)
+	.menu-burger:before
+		transform: translateY(-0.8rem)
+
+	.menu-open:after, .menu-open:before
+		position: absolute
+		content: ""
+		width: 3rem
+		height: 2px
+		background-color: $content
+		transition: all 0.3s ease-in
+	
+	.menu-open
+		background: transparent
+
+	.menu-open:after
+		transform: rotate(45deg)
+		transition: all 0.3s ease-in
+	.menu-open:before
+		transform: rotate(-45deg)
+		transition: all 0.3s ease-in
+
+
+@media(min-width: 577px)
+	
+	.top-header-right
+		flex-basis: 70%
+
+	.phone
+		display: block
+	
+	.nav
+		display: none
+	
+	.search
+		margin: 0 1rem
+
+	.button
+		display: block
+
+	.nav-xs	
+		display: none
+
+	.menu-xs
+		display: none
+		margin: 0 3rem
+		margin-left: 1rem
+
+
+
+@media(min-width: 768px)
+
+	.nav
+		display: block
+	
+	.search__img
+		height: 2rem
+		margin: 0
+	
+	.button
+		display: block
+
+	.menu-xs
+		display: none
